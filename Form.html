@@ -3,96 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
+    <style>
+        table {
+            border: 1px solid #999;
+            border-collapse: collapse;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #999;
+            width: 10em;
+            font-size: 20px;
+            text-align: left;
+        }
+        th {
+            background-color: #ede8e8b9;
+        }
+        tr {
+            border: 1px solid black;
+        }
+        body {
+            margin: 20px;
+        }
+        caption {
+            font-size: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            align-items: center;
+            padding: 10px;
+            border: 0px;
+            border-radius: 5px;
+            color: white;
+            margin: 0 10px;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #submit {
+            background-color: rgba(0, 0, 255, 0.7);
+        }
+        #reset {
+            background-color: rgba(255, 0, 0, 0.7);
+        }
+    </style>
 </head>
-<style>
-    table{
-        border: 1px solid #999;
-        border-collapse: collapse;
-        padding: 10px;
-    }
-    th,td{
-        padding: 10px;
-        border-spacing: 5px;
-        border: 1px solid #999;
-    }
-    tr{
-        border: 1px solid black;
-    }
-    body{
-        text-align: center;
-    }
-    caption{
-        text-size-adjust: 10px;
-    }
-</style>
 <body>
-    <h1 >Registration Form</h1>
-    <table>
-        <caption>Fill your details</caption>
-        <tr>
-            <form action="http://httpbin.org/get" method="get">
-               <th> <label for="name">FullName: </label></td>
-               <td><input type="text" id="name" name="FullName" placeholder="Enter your full name"></th>
-            </form>
-        </tr>
-        <tr>
-            <form action="http://httpbin.org/get" method="get">
+    <h1>Registration Form</h1>
+    <form action="http://httpbin.org/get" method="get">
+        <table>
+            <caption>Fill Your details</caption>
+            <tr>
+                <th><label for="name">FullName: </label></th>
+                <td><input type="text" id="name" name="FullName" placeholder="Enter your full name"></td>
+            </tr>
+            <tr>
                 <th><label for="password">Password: </label></th>
                 <td><input type="password" id="password" name="password" placeholder="Enter your password"></td>
-            </form>
-        </tr>
-        <tr>
-            <form action="http://httpbin.org/get" method="get">
-                <th><label for="age">Age</label></th>
-                <td><input type="number" id="age" min="1" max="10 padding: 0px;0"></td>
-            </form>
-        </tr>
-        <tr>
-            
-                <form action="http://httpbin.org/get" method="get">
-                    <th><label for="DOB">Bate-of-Birth</label></th>
-                    <td><input type="date" id="DOB" name="Date-of-Birth"></td>
-                </form>
-        </tr>
-        <tr>
-            <form action="http://httpbin.org/get" method="get">
+            </tr>
+            <tr>
+                <th><label for="age">Age:</label></th>
+                <td><input type="number" id="age" name="age" min="1" max="100"></td>
+            </tr>
+            <tr>
+                <th><label for="DOB">Date-of-Birth: </label></th>
+                <td><input type="date" id="DOB" name="Date-of-Birth"></td>
+            </tr>
+            <tr>
                 <th><label for="Gender">Gender:</label></th>
                 <td>
                     <input type="radio" value="male" id="male" name="gender">
                     <label for="male">Male</label>
-                    
                     <input type="radio" value="female" id="female" name="gender">
                     <label for="female">Female</label>
-                    
                     <input type="radio" value="other" id="other" name="gender">
                     <label for="other">Other</label>
                 </td>
-            </form>
-        </tr>
-        <tr>
-            <form action="http://httpbin.org/get" method="get">
+            </tr>
+            <tr>
                 <th>Hobbies: </th>
                 <td>
                     <p>
-                        <input type="checkbox" id="hobby" value="Reading">
-                        <label for="hobby">Reading</label>
+                        <input type="checkbox" id="reading" name="hobby" value="Reading">
+                        <label for="reading">Reading</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="hobby" value="Sports">
-                        <label for="hobby">Sports</label>
+                        <input type="checkbox" id="sports" name="hobby" value="Sports">
+                        <label for="sports">Sports</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="hobby" value="Travelling">
-                        <label for="hobby">Travelling</label>
+                        <input type="checkbox" id="travelling" name="hobby" value="Travelling">
+                        <label for="travelling">Travelling</label>
                     </p>
                 </td>
-            </form>
-        </tr>
-        <tr>
-            <th>Country:</th>
-            <td>
-                <form action="http://httpbin.org/get" method="get">
+            </tr>
+            <tr>
+                <th>Country:</th>
+                <td>
                     <select name="country" id="country" required>
                         <option value="" disabled selected>Select your country</option>
                         <option value="India">India</option>
@@ -103,21 +117,23 @@
                         <option value="Germany">Germany</option>
                         <option value="France">France</option>
                         <option value="Japan">Japan</option>
-                        padding: 0px; <option value="China">China</option>
+                        <option value="China">China</option>
                         <option value="Brazil">Brazil</option>
                         <option value="South Africa">South Africa</option>
                     </select>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <th>About Yourself:</th>
-            <td>
-                <form action="http://httpbin.org/get" method="get">
+                </td>
+            </tr>
+            <tr>
+                <th>About Yourself:</th>
+                <td>
                     <textarea id="message" name="message" rows="4" cols="30" placeholder="Write about yourself..."></textarea>
-                </form>
-            </td>
-        </tr>
-    </table>
+                </td>
+            </tr>
+        </table>
+        <div class="center">
+            <button type="submit" id="submit">Submit</button>
+            <button type="reset" id="reset">Reset</button>
+        </div>
+    </form>
 </body>
 </html>
