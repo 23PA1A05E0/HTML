@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border: 1px solid #999;
+        border-collapse: collapse;
+        padding: 10px;
+    }
+    th,td{
+        padding: 10px;
+        border-spacing: 5px;
+        border: 1px solid #999;
+    }
+    tr{
+        border: 1px solid black;
+    }
+    body{
+        text-align: center;
+    }
+    caption{
+        text-size-adjust: 10px;
+    }
+</style>
+<body>
+    <h1 >Registration Form</h1>
+    <table>
+        <caption>Fill your details</caption>
+        <tr>
+            <form action="http://httpbin.org/get" method="get">
+               <th> <label for="name">FullName: </label></td>
+               <td><input type="text" id="name" name="FullName" placeholder="Enter your full name"></th>
+            </form>
+        </tr>
+        <tr>
+            <form action="http://httpbin.org/get" method="get">
+                <th><label for="password">Password: </label></th>
+                <td><input type="password" id="password" name="password" placeholder="Enter your password"></td>
+            </form>
+        </tr>
+        <tr>
+            <form action="http://httpbin.org/get" method="get">
+                <th><label for="age">Age</label></th>
+                <td><input type="number" id="age" min="1" max="10 padding: 0px;0"></td>
+            </form>
+        </tr>
+        <tr>
+            
+                <form action="http://httpbin.org/get" method="get">
+                    <th><label for="DOB">Bate-of-Birth</label></th>
+                    <td><input type="date" id="DOB" name="Date-of-Birth"></td>
+                </form>
+        </tr>
+        <tr>
+            <form action="http://httpbin.org/get" method="get">
+                <th><label for="Gender">Gender:</label></th>
+                <td>
+                    <input type="radio" value="male" id="male" name="gender">
+                    <label for="male">Male</label>
+                    
+                    <input type="radio" value="female" id="female" name="gender">
+                    <label for="female">Female</label>
+                    
+                    <input type="radio" value="other" id="other" name="gender">
+                    <label for="other">Other</label>
+                </td>
+            </form>
+        </tr>
+        <tr>
+            <form action="http://httpbin.org/get" method="get">
+                <th>Hobbies: </th>
+                <td>
+                    <p>
+                        <input type="checkbox" id="hobby" value="Reading">
+                        <label for="hobby">Reading</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="hobby" value="Sports">
+                        <label for="hobby">Sports</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="hobby" value="Travelling">
+                        <label for="hobby">Travelling</label>
+                    </p>
+                </td>
+            </form>
+        </tr>
+        <tr>
+            <th>Country:</th>
+            <td>
+                <form action="http://httpbin.org/get" method="get">
+                    <select name="country" id="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="France">France</option>
+                        <option value="Japan">Japan</option>
+                        padding: 0px; <option value="China">China</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="South Africa">South Africa</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>About Yourself:</th>
+            <td>
+                <form action="http://httpbin.org/get" method="get">
+                    <textarea id="message" name="message" rows="4" cols="30" placeholder="Write about yourself..."></textarea>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
