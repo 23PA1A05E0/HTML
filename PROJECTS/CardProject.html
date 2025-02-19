@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #475569;
+            font-family: Arial, sans-serif;
+            background-image:url(https://tse2.mm.bing.net/th?id=OIP.br4ksY8S50GsXUBqSx35-wHaDD&pid=Api&P=0&h=180) ;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.619);
+        }
+        section {
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 10px ;
+            max-width: 800px;
+            background-color: rgb(105, 133, 149);
+            border-radius: 10px;
+            background-image:url(https://tse2.mm.bing.net/th?id=OIP.br4ksY8S50GsXUBqSx35-wHaDD&pid=Api&P=0&h=180) ;
+        }
+        .profile{
+            background-color: #475580;
+            padding-left: 100px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px auto;
+        }
+        nav a {
+            color: rgba(255, 255, 255, 0.619);
+            font-size: 1.2rem;
+            font-weight: boder;
+            padding-left: 80px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        figure{
+            background-color: aliceblue;
+            height: 400px;
+            width: 300px;
+            border-radius: 10%;
+            background-image:url(https://tse3.mm.bing.net/th?id=OIP.jo1CCsAGn2MDgmt2j0x_rwAAAA&pid=Api&P=0&h=180);
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+        }
+        figure img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px double #999;
+            margin: 20px;
+        }
+        figure .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.619);
+            /* margin: 10px 0; */
+        }
+        figure p {
+            font-size: 1.2rem;
+            color:rgba(255, 255, 255, 0.619);
+        }
+        footer {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Staff</h1>
+    </header>
+    <main>
+        <section>
+            <nav>
+                <a href="#">Joe</a>
+                <a href="#">Matt</a>
+                <a href="#">Jane</a>
+            </nav>
+        </section>
+        <section class="profile">
+            <figure>
+                <img src="https://github.com/gitdagray/css_course/blob/main/16_lesson/img/profile-800x800.png?raw=true" alt="Profile">
+                <p class="name">Joe Coder</p>
+                <p>"I code stuff."</p>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Acme Co.</p>
+    </footer>
+</body>
+</html>
