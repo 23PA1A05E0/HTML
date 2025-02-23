@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo</title>
+    <script src="./external.js"></script>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: content-box;
+    }
+    body{
+        font-family:'Courier New', Courier, monospace;
+        color: rgb(26, 129, 177);
+        text-align: center;
+    }
+    div button{
+        color: #333;
+        /* margin-right: 4em; */
+        margin: 3em;
+    }
+</style>
+
+<body>
+    <h1>JavaScript Demo</h1>
+    <script>
+        function internalFunction(){
+            console.log("Internal Javascript Function");
+            alert("This is an internal stylesheet.");
+        }
+    </script>
+    <div>
+        <button onclick="internalFunction()">Click for internal JS</button>
+        <button onclick="externalFunction()">Click for External JS</button>
+    </div>
+</body>
+</html>
