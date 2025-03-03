@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denomination Calculator</title>
+    <style>
+        * {
+            text-align: center;
+            font-family: sans-serif;
+        }
+        div {
+            margin: 20px 0;
+        }
+        div button {
+            background-color: #007BFF;
+            color: azure;
+            font-size: 15px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        p {
+            border: 1px solid black;
+            background-color: rgba(153, 153, 153, 0.2);
+            max-width: 40vw;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Denomination Calculator</h1>
+    <div>
+        <button onclick="calculateDenominations()">Enter Amount</button>
+    </div>
+    <p id="result">Click the button to enter the amount</p>
+    <script>
+        function calculateDenominations() {
+            const amount = parseInt(prompt("Enter the amount:"));
+            if (isNaN(amount) || amount < 0) {
+                alert("Please enter a valid positive number.");
+                return;
+            }
+
+            let remainingAmount = amount;
+            const denominations = [100, 50, 20, 10, 5, 2, 1];
+            const result = {};
+            // Calculate the number of each denomination
+            for (let denom of denominations) {
+                if (remainingAmount >= denom) {
+                    const count = Math.floor(remainingAmount / denom);
+                    result[denom] = count;
+                    remainingAmount %= denom;
+                }
+            }
+           
+            // Display the result
+            let output = `For Rs. ${amount}, the denominations are:<br>`;
+            for (let denom in result) {
+                output += `${result[denom]}-${denom}'s<br>`;
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
