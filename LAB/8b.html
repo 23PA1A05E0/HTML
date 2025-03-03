@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+    div p {
+        border: 1px solid #007BFF;
+        height: 20px;
+        background-color: azure;
+        padding: 10px; 
+        border-radius: 5px;
+    }
+    div button {
+        background-color: #007BFF;
+        border: none;
+        border-radius: 5px;
+        height: 2.5em;
+        color: azure;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1>Week Days using Switch Case</h1>
+    <div>
+        <button onclick="dayTeller()">Enter Number</button>
+        <p id="reply">Click the button to enter a number.</p>
+    </div>
+    <script>
+        function dayTeller() {
+            var x = prompt("Enter a number (1-7) for the day of the week:");
+            var msg;
+            switch (x) {
+                case "1": msg = "SUNDAY"; 
+                            break;
+                case "2": msg = "MONDAY"; 
+                            break;
+                case "3": msg = "TUESDAY";
+                             break;
+                case "4": msg = "WEDNESDAY"; 
+                            break;
+                case "5": msg = "THURSDAY"; 
+                            break;
+                case "6": msg = "FRIDAY"; 
+                            break;
+                case "7": msg = "SATURDAY"; 
+                            break;
+                default: msg = "Enter valid number (1-7)"; 
+                            break;
+            }
+            document.getElementById("reply").innerHTML = `${msg}`;
+        }
+    </script>
+</body>
+</html>
