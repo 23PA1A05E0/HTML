@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    button{
+        padding: 10px;
+        margin: 2px;
+        border-radius: 6px;
+        border: none;
+        background-color: rgb(0, 123, 255,0.8);
+        color: azure;
+    }
+    #output{
+        color: #d32be2;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <h1>JavaScript Date Object Methods</h1>
+    <p id="output"></p>
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="showTime()">Show Time</button>
+    <button onclick="showFullYear()">Get Full Year</button>
+    <button onclick="changeDate()">Change Date to 1st Jan 2025</button>
+    <script>
+        let now = new Date();
+        
+        function updateOutput(newText){
+            document.getElementById("output").innerHTML = "Result: " + newText;
+        }
+        
+        function showDate(){
+            updateOutput(now.toLocaleDateString());
+        }
+        
+        function showTime(){
+            updateOutput(now.toLocaleTimeString());
+        }
+        
+        function showFullYear(){
+            updateOutput(now.getFullYear());
+        }
+        
+        function changeDate(){
+            now.setFullYear(2025, 0, 1);  // Month is 0-indexed (0 = January)
+            updateOutput("Changed date: " + now.toDateString());
+        }
+    </script>
+</body>
+</html>
